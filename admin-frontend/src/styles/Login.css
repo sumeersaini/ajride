@@ -1,0 +1,212 @@
+
+/* Login Page Styling */
+.login-container {
+  min-height: 85vh;
+  /* background: #f9fafb; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-box {
+  background: #ffffff;
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  margin: 80px 0px 0px 0px;
+}
+
+.login-heading {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.welcome-text {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.privacy-text {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.privacy-link {
+  text-decoration: underline;
+  color: #6b7280;
+}
+
+.continue-btn, button.btnresend-btn {
+  width: 100%;
+  background: linear-gradient(90deg, #1785ca, #ef5b24);
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+}
+
+.divider:not(:empty)::before {
+  margin-right: .5em;
+}
+
+.divider:not(:empty)::after {
+  margin-left: .5em;
+}
+
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-btn {
+  width: 100%;
+  border: 1px solid #ddd;
+  background: white;
+  padding: 10px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.social-btn:hover {
+  background: #f3f4f6;
+}
+
+.icon {
+  margin-right: 8px;
+}
+
+.facebook-icon {
+  color: #1877f2;
+}
+
+/*loginpage*/
+.phone-input-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.country-code-select {
+  width: 130px;
+  padding: 10px;
+}
+
+.phone-input {
+  flex: 1;
+  padding: 10px;
+}
+
+select.country-code-select {
+  width: 108px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  height: 46px;
+}
+
+.switch-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+/***otp box**/
+.otp-input {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 20px;
+  text-align: center;
+  width: 40px;
+  height: 50px;
+}
+
+.loading {
+  text-align: center;
+}
+
+/**host loader**/
+
+/* Loader container styles */
+.loading-host {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  backdrop-filter: blur(10px);
+  /* actual blur effect */
+  background-color: rgba(255, 255, 255, 0.4);
+  /* optional dim effect */
+
+  z-index: 9999;
+}
+
+/* Loader image size */
+.loading-cls-host {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+
+  animation: spin 1s linear infinite;
+  /* optional spin effect */
+}
+
+/* Optional: loading spinner animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/**end host loader**/

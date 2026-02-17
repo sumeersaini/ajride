@@ -1,0 +1,62 @@
+.personal-info-tab {
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  min-height: 100%;
+}
+
+.personal-info-tab .tab-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.personal-info-tab .personal-info {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  padding: 2rem;
+  max-width: 600px;
+  margin-top: 1rem;
+  /* margin: 20px auto; */
+}
+
+.personal-info-tab .personal-info p {
+  margin: 0.8rem 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+.personal-info-tab .personal-info p strong {
+  display: inline-block;
+  width: 140px;
+  color: #111;
+}
+
+.personal-info-tab .no-data-found {
+  background-color: #fff5f5;
+  border: 1px solid #ffcccc;
+  color: #cc0000;
+  padding: 1.2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  margin-top: 1rem;
+}
+
+.approve-button {
+  margin-top: 1.5rem;
+  padding: 10px 20px;
+  background-color: #01732b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.approve-button:disabled {
+  background-color: #a7f3d0;
+  cursor: not-allowed;
+}

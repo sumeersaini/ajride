@@ -1,0 +1,141 @@
+.users-tab {
+  padding: 12px;
+}
+
+.users-tab h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+/* -------------------
+   TABLE STYLES
+-------------------- */
+.user-tab-table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  min-width: 600px; /* Enables horizontal scroll on smaller screens */
+}
+
+.user-table thead {
+  background-color: #f3f4f6;
+  text-align: left;
+}
+
+.user-table th,
+.user-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+.user-table tr:hover {
+  background-color: #f9fafb;
+}
+
+/* -------------------
+   STATUS BADGES
+-------------------- */
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+}
+
+.status-badge.active {
+  background-color: #10b981;
+}
+
+.status-badge.inactive {
+  background-color: #6b7280;
+}
+
+.status-badge.pending {
+  background-color: #f59e0b;
+}
+
+/* -------------------
+   SEARCH INPUT
+-------------------- */
+.user-controls {
+  margin-bottom: 1rem;
+}
+
+.user-controls input {
+  padding: 0.5rem;
+  width: 250px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.user-controls.search.box {
+  text-align: right;
+}
+
+/* -------------------
+   PAGINATION
+-------------------- */
+.pagination-controls {
+  margin-top: 12px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pagination-controls button {
+  padding: 5px 15px;
+  border-radius: 5px;
+  background: #1786cb;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+}
+
+.pagination-controls button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.dashboard-layout .page-title {
+  margin: 0;
+}
+
+/* -------------------
+   RESPONSIVE STYLES
+-------------------- */
+@media (max-width: 768px) {
+  .users-tab {
+    padding: 1rem;
+  }
+
+  .user-controls input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+
+  .pagination-controls {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .pagination-controls button {
+    width: 100%;
+    max-width: 150px;
+  }
+}

@@ -1,0 +1,268 @@
+.driver-info-tab {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    padding: 2rem;
+    /* max-width: 600px; */
+    margin-top: 1rem;
+    /* margin: 20px auto; */
+}
+
+.driver-fields p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.driver-documents {
+    margin-top: 2rem;
+}
+
+.driver-documents h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+.documents-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+/* .document-item {
+  width: 180px;
+  text-align: center;
+} */
+
+.document-preview {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    min-height: 200px;  
+    max-height: 200px;
+}
+
+.filename {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.no-data-found {
+    text-align: center;
+    color: gray;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+.documents-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Two items per row */
+    gap: 2rem;
+    /* padding: 0; */
+    list-style: none;
+    margin-top: 1rem;
+    padding-right: 80PX;
+}
+
+.document-item {
+    background: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.document-preview {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.filename {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    color: #555;
+    word-break: break-all;
+}
+
+.approval-buttons {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.approval-buttons button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.approve-btn {
+  background-color: #e6f4ea;
+  color: #2e7d32;
+}
+
+.reject-btn {
+  background-color: #fdecea;
+  color: #c62828;
+}
+
+.approve-btn:hover {
+  background-color: #c8e6c9;
+}
+
+.reject-btn:hover {
+  background-color: #f8d7da;
+}
+/*******************/
+/* Make html and body full height */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Dashboard layout as flex container */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background-color: #0f172a;
+  color: white;
+  padding: 20px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* scroll if content overflows */
+}
+
+/* Main content area */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9fafb;
+  overflow-y: auto;
+}
+
+/* Optional styling */
+.sidebar-title {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  padding: 10px;
+  cursor: pointer;
+  color: #cbd5e1;
+  border-radius: 4px;
+}
+
+.menu-item.active,
+.menu-item:hover {
+  background-color: #1e293b;
+  color: white;
+}
+
+/* Document styling (2 per row) */
+.documents-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.document-item {
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.document-preview {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.filename {
+  font-size: 0.9rem;
+  color: #4b5563;
+  word-break: break-all;
+}
+
+.approval-buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.approve-btn,
+.reject-btn {
+  flex: 1;
+  padding: 6px 10px;
+  font-size: 0.875rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+ 
+/* Tab styling */
+.tab-title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.driver-fields p {
+  margin: 0.5rem 0;
+}
+
+.doc-status {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.doc-status.approved {
+  color: green;
+}
+
+.doc-status.rejected {
+  color: red;
+}
+
+.doc-status.pending {
+  color: orange;
+}
+@media (max-width: 768px) {
+    .documents-list {
+        grid-template-columns: 1fr;
+        /* 1 item per row on mobile */
+    }
+}
