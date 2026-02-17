@@ -1,0 +1,234 @@
+/* ================================
+   Passenger Ride Layout
+================================ */
+.passenger-ride.ride-container {
+  display: flex;
+  flex-direction: row;   /* desktop: side-by-side */
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  min-height: 100vh; /* ensure full height */
+  margin-top: 90px;
+}
+
+/* ================================
+   Left Panel (ride details)
+================================ */
+.passenger-ride .left-panel {
+  width: 30%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px;
+  background: transparent;
+
+  /* prevent bottom bar overlap */
+  padding-bottom: calc(80px + env(safe-area-inset-bottom));
+}
+
+.passenger-ride .ride-details {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  padding: 20px;
+}
+
+.passenger-ride .ride-details h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.passenger-ride .ride-details p {
+  margin: 10px 0;
+  font-size: 15px;
+  color: #555;
+}
+
+/* ================================
+   Actions Card
+================================ */
+.passenger-ride .ride-actions {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.passenger-ride .ride-actions button {
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.passenger-ride .ride-actions button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.passenger-ride .btn-success {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.passenger-ride .btn-success:hover {
+  background-color: #45a049;
+}
+
+.passenger-ride .btn-cancel {
+  background-color: #F44336;
+  color: white;
+}
+
+.passenger-ride .btn-cancel:hover {
+  background-color: #d32f2f;
+}
+
+/* ================================
+   Right Panel (map)
+================================ */
+.passenger-ride .ride-map {
+  width: 70%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Geo error message */
+.passenger-ride .geo-error {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ffe0e0;
+  padding: 8px 12px;
+  border-radius: 4px;
+  color: #b00000;
+  z-index: 10;
+}
+
+/* Info windows on map */
+.passenger-ride .pickup-infowindow,
+.passenger-ride .dropoff-infowindow {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 6px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  min-width: 200px;
+}
+
+.passenger-ride .pickup-infowindow .infowindow-time-box {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 12px;
+  text-align: center;
+}
+
+.passenger-ride .dropoff-infowindow .infowindow-time-box {
+  background-color: #F44336;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 12px;
+  text-align: center;
+}
+
+.passenger-ride .infowindow-label-box {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Info box at the bottom of the map */
+.passenger-ride .map-info-box {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: flex;
+  gap: 30px;
+  z-index: 5;
+  font-size: 16px;
+  color: #333;
+}
+
+.passenger-ride .map-info-box .info-item strong {
+  color: #555;
+}
+
+/* Recenter button */
+.passenger-ride .recenter-button {
+  position: absolute;
+  bottom: 25px;
+  right: 55px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.passenger-ride .recenter-button img {
+  width: 20px;
+  height: 20px;
+}
+
+/* ================================
+   Responsive Design
+================================ */
+
+/* Tablet & Mobile: stack map on top, panel below */
+@media (max-width: 1024px) {
+  .passenger-ride.ride-container {
+    flex-direction: column;
+  }
+
+  .passenger-ride .ride-map {
+    width: 100%;
+    height: 60vh;
+    order: 1; /* map on top */
+  }
+
+  .passenger-ride .left-panel {
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+    order: 2; /* details below */
+  }
+
+  /* Ride details card looks like floating bottom sheet */
+  .passenger-ride .ride-details,
+  .passenger-ride .ride-actions {
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -4px 16px rgba(0,0,0,0.1);
+  }
+}

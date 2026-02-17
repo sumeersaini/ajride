@@ -1,0 +1,260 @@
+/* src/styles/HostOnboarding.css */
+
+.onboarding-container {
+  max-width: 700px;
+  margin: 120px auto;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+  font-family: sans-serif;
+}
+
+.onboarding-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.onboarding-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.onboarding-tab-button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  background-color: #eee;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.file-upload-grid img {
+  max-width: 185px;
+  max-height: 185px;
+}
+
+.onboarding-tab-button:hover {
+  background-color: #ddd;
+}
+
+.onboarding-input[type="date"] {
+  width: 100%;
+  max-width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.onboarding-tab-button.active {
+  background-color: #1785ca;
+  color: #fff;
+}
+
+.onboarding-tab-content {
+  margin-top: 1rem;
+}
+
+.tab-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tab-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.onboarding-input {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.onboarding-submit-button {
+  background-color: #ef5c25;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+}
+
+.file-box-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* ✅ fixes min-width issue on iPhone */
+}
+
+.file-box-label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.file-box {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 2px dashed #cbd5e1;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #f9fafb;
+  transition: background-color 0.2s ease;
+  text-align: center;
+  padding: 0.5rem;
+  position: relative;
+}
+
+.file-box:hover {
+  background-color: #f1f5f9;
+}
+
+.file-placeholder {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.file-name {
+  font-size: 0.85rem;
+  color: #16a34a;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.file-input-hidden {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-upload-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.driver-btn, .vehicle-btn, .additional-btn {
+  margin-top: 20px;
+}
+
+/* ---------- Bottom Navigation ---------- */
+
+/* Main global nav (always visible) */
+.main-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Sub nav (onboarding specific, stacked above main nav) */
+.mobile-bottom-sub-nav {
+  display: none;
+}
+
+.mobile-sub-nav-item {
+  background: none;
+  border: none;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: #444;
+}
+
+.mobile-sub-nav-item.active {
+  color: #007bff;
+}
+
+.mobile-sub-nav-item svg {
+  font-size: 18px;
+}
+
+.mobile-sub-nav-item .nav-text {
+  margin-top: 3px;
+}
+
+/* ---------- Mobile Responsive ---------- */
+@media (max-width: 768px) {
+  .submit-wrapper {
+    padding-bottom: 112px; /* ✅ leaves room for both navs */
+  }
+
+   .onboarding-container {
+    box-shadow: none;
+  }
+  .mobile-bottom-sub-nav {
+    display: flex;
+    position: fixed;
+    bottom: 56px; /* ✅ sits above main nav */
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    justify-content: space-around;
+    padding: 8px 0;
+    z-index: 1001;
+  }
+
+  .onboarding-tabs {
+    display: none;
+  }
+}
+
+/* Extra-small devices (iPhone SE, 375px and down) */
+@media (max-width: 600px) {
+  .onboarding-container {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 1rem;
+    box-shadow: none;
+  }
+
+  .file-upload-grid {
+    grid-template-columns: 1fr; /* single column */
+    justify-items: center; /* ✅ center items */
+  }
+
+  .file-upload-grid img {
+    max-width: 100%;
+    max-height: 120px;
+  }
+
+  .file-box {
+    width: 100%; /* ✅ fill container */
+    max-width: 100%;
+    max-height: 320px;
+    height: auto;
+  }
+
+  .file-placeholder,
+  .file-name {
+    font-size: 0.8rem;
+  }
+}

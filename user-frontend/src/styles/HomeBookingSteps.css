@@ -1,0 +1,101 @@
+/* BookingSteps.css */
+
+.booking-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.booking-title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.booking-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.booking-step {
+  text-align: center;
+  background-color: #fff;
+  /* padding: 20px; */
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.step-image {
+    width: 100%;
+    max-height: 300px;
+    min-height: 300px;
+    object-fit: cover;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.step-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.step-description {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 15px;
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 1024px) {
+  .booking-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+   .booking-step1-container {
+    margin-top: 35px!important;
+  }
+  .ride-detail-bookingstep1{
+    order: 2;
+  }
+  .map-bookingstep1{
+    order: 1;
+    min-height: 335px !important;
+  }
+}
+
+/* Mobile: 1 column only */
+@media (max-width: 768px) {
+  .booking-step1-container {
+    margin-top: 35px!important;
+  }
+  .ride-detail-bookingstep1{
+    order: 2;
+  }
+  .map-bookingstep1{
+    order: 1;
+    min-height: 335px !important;
+  }
+  .booking-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-title {
+    font-size: 20px;
+  }
+
+  .step-title {
+    font-size: 16px;
+  }
+
+  .step-description {
+    font-size: 14px;
+  }
+}
+
+

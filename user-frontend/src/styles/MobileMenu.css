@@ -1,0 +1,58 @@
+/* Bottom Bar container */
+.mobile-bottom-bar {
+  display: none; /* hidden on desktop */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+  background-color: #fff;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-evenly; /* distribute evenly */
+  align-items: center;
+  padding: 5px 0;
+}
+
+/* Show only on mobile */
+@media screen and (max-width: 768px) {
+  .mobile-bottom-bar {
+    display: flex;
+  }
+}
+
+/* Each menu item */
+.mobile-bottom-bar a {
+  flex: 1; /* equal width */
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.bottom-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 13px;
+}
+
+.bottom-item svg {
+  font-size: 20px;
+}
+
+.bottom-item span {
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+/* Active menu item */
+.mobile-bottom-bar a.active {
+  color: #007bff; /* highlight color */
+}
+
+.mobile-bottom-bar a:hover {
+  color: #007bff;
+}

@@ -1,0 +1,142 @@
+ 
+.available-rides-container {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: auto;
+    padding: 16px;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+h2 {
+  margin: 0 0 0.25rem;
+}
+
+.subtitle {
+  margin-bottom: 1.5rem;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.ride-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding: 1rem 3px;
+}
+
+.ride-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.ride-info {
+  flex-grow: 1;
+  margin-left: 1rem;
+}
+
+.ride-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.eta {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.ride-desc {
+  margin: 0.25rem 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.tag-faster {
+  background-color: #2979ff;
+  color: white;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 4px;
+}
+
+.ride-pricing {
+  text-align: right;
+}
+
+.discount {
+  color: green;
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.original-price {
+  font-size: 0.85rem;
+  text-decoration: line-through;
+  color: #999;
+}
+
+.ride-footer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+}
+
+.payment-select {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.request-btn {
+  background-color: #ef5b24;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+
+/* Highlight selected ride */
+.ride-card.selected {
+  border: 2px solid #ef5b24;
+  border-radius: 8px;
+  background-color: #fff7f3;
+}
+
+/* Hover effect for better UX */
+.ride-card:hover {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+/* Disabled state for Book Now button */
+.request-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}

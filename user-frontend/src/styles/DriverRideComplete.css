@@ -1,0 +1,80 @@
+/* DriverRideComplete.css */
+
+/* Basic page styles */
+.ride-complete-page {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  transition: transform 0.2s ease;
+}
+
+.ride-complete-page:hover {
+  transform: translateY(-2px);
+}
+
+/* Heading */
+.ride-complete-page h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #0070f3;
+  text-align: center;
+}
+
+/* Ride detail rows */
+.ride-complete-page p {
+  margin: 0.8rem 0;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.ride-complete-page p:last-child {
+  border-bottom: none;
+}
+
+.ride-complete-page strong {
+  color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ride-complete-page {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .ride-complete-page h2 {
+    font-size: 1.5rem;
+  }
+
+  .ride-complete-page p {
+    font-size: 0.95rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ride-complete-page p strong {
+    margin-bottom: 0.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ride-complete-page {
+    padding: 0.8rem;
+  }
+
+  .ride-complete-page h2 {
+    font-size: 1.3rem;
+  }
+
+  .ride-complete-page p {
+    font-size: 0.9rem;
+  }
+}

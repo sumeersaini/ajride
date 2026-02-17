@@ -1,0 +1,46 @@
+ 
+
+/* ---------- Responsive ---------- */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .search-bar {
+        max-width: 90%;
+        padding: 1rem;
+    }
+
+    .autocomplete-input {
+        font-size: 0.95rem;
+        padding: 0.6rem 0.6rem 0.6rem 2.2rem;
+    }
+    .step-image {
+        width: 100%;
+        max-height: 575px!important;
+    }
+    .search-bar .search-button {
+        margin: 10px 10px 10px 0px !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .search-bar {
+    max-width: 95%;
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+
+  .autocomplete-input {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+  }
+
+  .search-button {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .autocomplete-suggestions li {
+    padding: 0.5rem;
+  }
+}

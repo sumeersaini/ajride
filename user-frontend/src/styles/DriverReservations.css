@@ -1,0 +1,116 @@
+.driver-reservations-page {
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.driver-reservations-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.driver-reservations-content h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.rides-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.rides-table th,
+.rides-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.rides-table th {
+  background-color: #1888ce;
+  color: #fff;
+}
+
+.rides-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Pagination controls */
+.pagination-controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.pagination-controls button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.pagination-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination-controls span {
+  font-size: 14px;
+  color: #555;
+}
+
+/* 📱 Mobile Responsive Table */
+@media (max-width: 768px) {
+  .rides-table,
+  .rides-table thead,
+  .rides-table tbody,
+  .rides-table th,
+  .rides-table td,
+  .rides-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .rides-table thead {
+    display: none; /* hide table headers */
+  }
+
+  .rides-table tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .rides-table td {
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .rides-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #1888ce;
+    flex: 1;
+    text-align: left;
+    padding-right: 10px;
+  }
+}

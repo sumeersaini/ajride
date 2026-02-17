@@ -1,0 +1,45 @@
+.marker-popup-container {
+  display: flex;
+  /* border: 1px solid #ccc; */
+  border-radius: 4px;
+  overflow: hidden;
+  font-size: 0.85rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  /* border-bottom: 1px solid;
+border-bottom-right-radius: unset;
+border-bottom-left-radius: unset; */
+}
+
+.marker-time-box {
+  background-color: #000;
+  color: #fff;
+  padding: 6px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  min-width: 70px;
+}
+
+.marker-label-box {
+  background-color: #fff;
+  color: #000;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.gm-style-iw > .gm-style-iw-chr{
+  display: none !important;
+}
+
+ 
+.gm-style-iw.gm-style-iw-c{
+    padding: 0!important;
+}
+
+.gm-style-iw-d {
+    overflow: auto!important;
+}

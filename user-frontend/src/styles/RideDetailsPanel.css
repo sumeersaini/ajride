@@ -1,0 +1,67 @@
+.ride-details-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 20px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ride-title {
+  margin-bottom: 16px;
+  color: #333;
+  font-size: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.ride-info p {
+  margin: 8px 0;
+  font-size: 15px;
+  color: #555;
+}
+
+.ride-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modify-btn {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.modify-btn:hover {
+  background-color: #5a6268;
+}
+
+.confirm-btn {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.confirm-btn:hover {
+  background-color: #0069d9;
+}
+
+button.btn.confirm-btn {
+    background: linear-gradient(90deg, #1785ca, #ef5b24);
+    border: none;
+    color: white;
+    padding: 5px 6px;
+    cursor: pointer;
+    border-radius: 5px;
+    flex-shrink: 0;
+}

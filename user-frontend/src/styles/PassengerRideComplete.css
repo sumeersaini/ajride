@@ -1,0 +1,88 @@
+.passenger-ride-complete {
+  max-width: 500px;
+  margin: 120px auto;
+  padding: 20px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #2c3e50;
+}
+
+.passenger-ride-complete h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #1a1f36;
+}
+
+.passenger-ride-complete .ride-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: transform 0.3s ease;
+}
+
+.passenger-ride-complete .ride-card:hover {
+  transform: translateY(-2px);
+}
+
+.passenger-ride-complete .ride-row {
+    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.passenger-ride-complete .ride-row:last-child {
+  border-bottom: none;
+}
+
+.passenger-ride-complete .ride-label {
+  font-weight: 600;
+  font-size: 16px;
+  color: #555;
+}
+
+.passenger-ride-complete .ride-value {
+  font-weight: 700;
+  font-size: 16px;
+  color: #1a1f36;
+}
+
+/* Total fare styling */
+.passenger-ride-complete .total-fare-row {
+  background-color: #e0f2ff;
+  border-radius: 8px;
+  padding: 12px 15px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #007bff;
+  justify-content: flex-end;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .passenger-ride-complete {
+    padding: 15px;
+    margin: 40px 10px;
+  }
+
+  .passenger-ride-complete .ride-card {
+    padding: 20px 15px;
+  }
+
+  .passenger-ride-complete .ride-label,
+  .passenger-ride-complete .ride-value {
+    font-size: 15px;
+  }
+
+  .passenger-ride-complete .total-fare-row {
+    font-size: 17px;
+  }
+}

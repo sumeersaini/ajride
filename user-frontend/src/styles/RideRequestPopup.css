@@ -1,0 +1,107 @@
+.ride-request-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* dim background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-family: "Arial", sans-serif;
+}
+
+.ride-request-box {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  animation: slideUp 0.3s ease-in-out;
+}
+
+.ride-title {
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #111;
+}
+
+.ride-info p {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #333;
+  text-align: left;
+}
+
+.ride-info .icon {
+  margin-right: 6px;
+}
+
+.fare {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #111;
+  margin-top: 10px;
+}
+
+.ride-request-timer {
+  height: 6px;
+  background: #28a745;
+  border-radius: 4px;
+  margin: 16px 0;
+  transition: width 1s linear;
+}
+
+.ride-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn.accept {
+  background: #28a745;
+  color: white;
+  margin-right: 8px;
+}
+
+.btn.reject {
+  background: #dc3545;
+  color: white;
+  margin-left: 8px;
+}
+
+.ride-info .icon {
+  margin-right: 8px;
+  color: #444;
+  width: 18px;
+}
+
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

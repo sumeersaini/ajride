@@ -1,0 +1,174 @@
+/* HostDashboard.css */
+
+/* ===== Base Layout ===== */
+.host-dashboard-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  font-family: sans-serif;
+  margin-top: 120px; /* default for desktop */
+}
+
+/* ===== Navigation ===== */
+.host-dashboard-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff;
+  border-top: 1px solid #e5e5e5;
+  padding: 0.5rem 0;
+  position: sticky;
+  bottom: 0;
+  z-index: 1000;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.host-dashboard-nav::-webkit-scrollbar {
+  display: none;
+}
+
+/* Each nav item */
+.nav-item {
+  flex: 1;
+  text-align: center;
+  padding: 0.5rem;
+  color: #666;
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  transition: color 0.3s, background 0.3s;
+}
+
+.nav-item .nav-icon {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.nav-item:hover {
+  color: #007bff;
+}
+
+.nav-item.active {
+  color: #007bff;
+  font-weight: 600;
+}
+
+/* ===== Content Area ===== */
+.host-dashboard-content {
+  padding: 20px;
+  flex: 1;
+}
+
+/* ===== Responsive Design ===== */
+
+/* Mobile (up to 767px) -> Bottom Nav */
+@media (max-width: 767px) {
+  .host-dashboard-container {
+    margin-top: 0px; /* smaller margin for mobile */
+  }
+
+  .host-dashboard-nav {
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 1px solid #e5e5e5;
+    
+   }
+
+  .nav-item {
+    font-size: 0.75rem;
+  }
+
+  .nav-item .nav-icon {
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .host-dashboard-content {
+    padding: 15px;
+  }
+}
+
+/* Tablets (768px – 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .host-dashboard-container {
+    margin-top: 90px;
+  }
+
+  .host-dashboard-nav {
+    position: relative;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    border-top: none;
+    border-bottom: 2px solid #ddd;
+    background: #fff;
+  }
+
+  .nav-item {
+    flex: unset;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.9rem;
+    padding: 10px 14px;
+  }
+
+  .nav-item .nav-icon {
+    margin: 0 6px 0 0;
+    font-size: 1rem;
+  }
+
+  .host-dashboard-content {
+    padding: 18px;
+  }
+}
+
+/* Desktop (992px – 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .host-dashboard-container {
+    margin-top: 110px;
+  }
+
+  .host-dashboard-nav {
+    justify-content: flex-start;
+    gap: 2rem;
+    border-bottom: 2px solid #ddd;
+    position: relative;
+  }
+
+  .nav-item {
+    font-size: 1rem;
+    padding: 12px 18px;
+  }
+
+  .nav-item .nav-icon {
+    font-size: 1rem;
+    margin-right: 8px;
+  }
+}
+
+/* Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+  .host-dashboard-container {
+    margin-top: 130px;
+  }
+
+  .host-dashboard-nav {
+    gap: 2.5rem;
+  }
+
+  .nav-item {
+    padding: 14px 22px;
+    font-size: 1rem;
+  }
+
+  .nav-item .nav-icon {
+    font-size: 1.1rem;
+    margin-right: 8px;
+  }
+}
