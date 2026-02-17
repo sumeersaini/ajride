@@ -3,14 +3,15 @@ import { initializeApp } from "firebase/app";
 import { getMessaging } from "firebase/messaging";
 
 const firebaseConfig = {
-  apiKey: " ",
+  apiKey: "testljkn",
   authDomain: "ajride-.firebaseapp.com",
   projectId: "ajride-f4f8c",
-  storageBucket: "ajride-f4f8c..app",
+  storageBucket: "ajridef8c..app",
   messagingSenderId: "",
-  appId: "1:1092273295248:web:",
+  appId: "1:109227348:web:",
   measurementId: "G-"
 };
 const app = initializeApp(firebaseConfig);
 export const messaging = getMessaging(app);
+
 
